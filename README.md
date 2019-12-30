@@ -2,6 +2,10 @@
 
 A flutter plugin to build a widget outside of it's current tree. Similar to [React Portals](https://reactjs.org/docs/portals.html).
 
+## Demo
+
+https://rodydavis.github.io/portal/
+
 ## Example
 
 ```dart
