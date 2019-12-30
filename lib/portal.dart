@@ -16,6 +16,7 @@ class ReactPortal {
 
   ReactPortal({
     this.key,
+    @required this.builder,
     this.asWideAsParent = false,
     this.asTallAsParent = false,
     this.bottom,
@@ -25,7 +26,6 @@ class ReactPortal {
     this.width,
     this.height,
     this.alignment,
-    @required this.builder,
     this.ancestor,
     this.maintainState = false,
     this.opaque = false,
