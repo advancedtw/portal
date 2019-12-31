@@ -1,6 +1,6 @@
 name: portal
 description: A Flutter plugin to build widgets out of the current tree. Similar to React Portals.
-version: 1.0.0+2
+version: 1.0.0+3
 authors:
   - Rhodes Davis Jr. <rody.davis.jr@gmail.com>
   - Rive <info@rive.app>
