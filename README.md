@@ -4,6 +4,8 @@ A flutter plugin to build a widget outside of it's current tree. Similar to [Rea
 
 ![image](https://github.com/rive-app/portal/blob/master/docs/portal.jpg?raw=true)
 
+Thanks to @TahaTesser [here](https://twitter.com/tahatesser/status/1212040458064367618?s=21)
+
 ## Demo
 
 https://rive-app.github.io/portal/
