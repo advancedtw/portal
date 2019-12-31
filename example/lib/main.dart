@@ -36,43 +36,45 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('React Portal Example'),
       ),
-      body: ListView.separated(
-        itemCount: 500,
-        separatorBuilder: (_, index) =>
-            Container(height: 2, color: Colors.grey),
-        itemBuilder: (_, index) {
-          final _key = ValueKey(index);
+      body: Scrollbar(
+        child: ListView.separated(
+          itemCount: 500,
+          separatorBuilder: (_, index) =>
+              Container(height: 2, color: Colors.grey),
+          itemBuilder: (_, index) {
+            final _key = ValueKey(index);
 
-          return Builder(
-            builder: (context) => ListTile(
-              title: Text('Test Portal: $index'),
-              onTap: () {
-                final _portal = ReactPortal(
-                    key: _key,
-                    builder: (_) => Card(
-                          elevation: 5,
-                          child: InkWell(
-                            onTap: () {
-                              _provider.removeKey(_key);
-                            },
-                            child: Container(
-                              width: 200,
-                              child: Column(
-                                children: <Widget>[
-                                  ListTile(
-                                    title: Text('Info about the list item..'),
-                                    subtitle: Text(index.toString()),
-                                  )
-                                ],
+            return Builder(
+              builder: (context) => ListTile(
+                title: Text('Test Portal: $index'),
+                onTap: () {
+                  final _portal = ReactPortal(
+                      key: _key,
+                      builder: (_) => Card(
+                            elevation: 5,
+                            child: InkWell(
+                              onTap: () {
+                                _provider.removeKey(_key);
+                              },
+                              child: Container(
+                                width: 200,
+                                child: Column(
+                                  children: <Widget>[
+                                    ListTile(
+                                      title: Text('Info about the list item..'),
+                                      subtitle: Text(index.toString()),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ));
-                _portal.show(context);
-              },
-            ),
-          );
-        },
+                          ));
+                  _portal.show(context);
+                },
+              ),
+            );
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.visibility),
