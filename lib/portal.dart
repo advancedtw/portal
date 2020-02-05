@@ -108,7 +108,8 @@ class PortalProvider extends InheritedWidget {
 
   final Widget _child;
   final Map<Key, OverlayEntry> _entries = {};
-  List<OverlayEntry> get entries => _entries.values;
+  List<OverlayEntry> get entries =>
+      _entries.entries.map((e) => e.value).toList();
 
   void updateEntries(
     BuildContext context,
